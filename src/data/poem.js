@@ -1,9 +1,9 @@
 const poem = `If you were part of my smile
-
 You would definitely
 Be the reason behind it.
 
-The song on repeat on my playlist.
+The song on repeat
+On my playlist.
 
 That page in my book
 I keep folding back to.
@@ -12,7 +12,8 @@ The kind of distraction
 Nobody wants to recover from.
 
 That thought I entertain
-When I'm supposed to be paying attention.
+When I'm supposed
+To be paying attention.
 
 The wrong turn
 I would choose
@@ -25,16 +26,15 @@ Well...
 
 I guess what I'm trying to say is...
 
-If fate writes in invisible ink,
+If fate writes
+In invisible ink,
 
 Then you are the message
-I have been reading all along.
+I have been reading
+All along.
 
-And yes...
-
-Comfort had always sounded
+Comfort has always sounded
 A little like your name.
 
-❤️ Sharlyn ❤️`;
-
+Sharlyn ❤️`;
 export default poem;

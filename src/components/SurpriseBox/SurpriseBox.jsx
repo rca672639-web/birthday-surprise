@@ -1,61 +1,48 @@
 import { motion } from "framer-motion";
 import { FaGift } from "react-icons/fa";
 
-export default function SurpriseBox() {
-  const openGift = () => {
-    const section = document.getElementById("letter");
-
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  };
-
+export default function SurpriseBox({ onOpen }) {
   return (
     <motion.div
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      transition={{
-        delay: 1.2,
-        duration: 0.8,
-        type: "spring",
+      whileHover={{
+        scale: 1.08,
+        rotate: -3,
       }}
-      className="mt-12"
+      whileTap={{
+        scale: 0.95,
+      }}
+      onClick={onOpen}
+      className="cursor-pointer"
     >
-      <motion.button
-        whileHover={{
-          scale: 1.08,
-          rotate: -3,
-        }}
-        whileTap={{
-          scale: 0.95,
-        }}
-        animate={{
-          y: [0, -8, 0],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-        }}
-        onClick={openGift}
+      <div
         className="
-        flex
-        items-center
-        gap-4
-        rounded-full
-        bg-[#6F4E37]
-        px-10
-        py-5
-        text-white
-        shadow-2xl"
+          flex
+          h-60
+          w-60
+          items-center
+          justify-center
+          rounded-3xl
+          bg-gradient-to-br
+          from-pink-500
+          via-pink-400
+          to-[#6F4E37]
+          shadow-2xl
+        "
       >
-        <FaGift size={28} />
+        <FaGift
+          size={90}
+          className="text-white"
+        />
+      </div>
 
-        <span className="font-semibold">
-          Open Your Surprise ❤️
-        </span>
-      </motion.button>
+      <h2
+        className="mt-6 text-center text-4xl"
+        style={{
+          fontFamily: "Great Vibes",
+        }}
+      >
+        Tap To Open ❤️
+      </h2>
     </motion.div>
   );
 }

@@ -1,73 +1,27 @@
 import { FaHeart } from "react-icons/fa";
 
-export default function Footer(){
+export default function Footer() {
+  return (
+    <footer className="bg-[#2D1B18] py-12 text-center text-white">
+      <FaHeart className="mx-auto mb-4 text-pink-500" size={28} />
 
-return(
+      <h2
+        className="text-4xl"
+        style={{
+          fontFamily: "Great Vibes",
+        }}
+      >
+        Happy Birthday, Sharlyn ❤️
+      </h2>
 
-<footer
+      <p className="mt-6 text-lg">
+        Made with endless love,
+        just for you.
+      </p>
 
-className="py-32 text-center bg-[#4B2E2B] text-white"
-
->
-
-<h2
-
-className="text-7xl"
-
-style={{
-
-fontFamily:"Great Vibes"
-
-}}
-
->
-
-Happy Birthday
-
-</h2>
-
-<h3
-
-className="mt-6 text-4xl text-pink-300"
-
->
-
-Sharlyn ❤️
-
-</h3>
-
-<p
-
-className="mt-10 text-xl"
-
->
-
-May every dream you have
-
-find its way into reality.
-
-May laughter never leave your heart.
-
-May love surround you today
-
-and every day.
-
-</p>
-
-<div className="mt-16 flex justify-center">
-
-<FaHeart
-
-size={70}
-
-className="text-pink-400 animate-pulse"
-
-/>
-
-</div>
-
-</footer>
-
-)
-
+      <p className="mt-3 text-sm opacity-70">
+        From your biggest supporter ❤️
+      </p>
+    </footer>
+  );
 }

@@ -1,65 +1,78 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap");
-
 @import "tailwindcss";
 
-/* ==========================
-   Theme Variables
-========================== */
+:root{
 
-:root {
-  --color-brown: #6F4E37;
-  --color-dark-brown: #4B2E2B;
-  --color-light-brown: #8B5E3C;
+--brown:#6F4E37;
+--brown-dark:#4B2E2B;
 
-  --color-white: #FAF9F6;
-  --color-cream: #FFF8F0;
+--cream:#FFF8F0;
 
-  --color-pink: #EC4899;
-  --color-rose: #F472B6;
+--white:#FAF9F6;
 
-  --color-gold: #FACC15;
+--pink:#EC4899;
 
-  --background-1: #fff8f0;
-  --background-2: #ffe4ec;
-  --background-3: #e9d5ff;
+--gold:#FACC15;
+
+--lavender:#E9D5FF;
+
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
 }
 
 html{
-    scroll-behavior:smooth;
+
+scroll-behavior:smooth;
+
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:var(--background-1);
-    color:var(--color-dark-brown);
-    overflow-x:hidden;
-}
 
-button{
-    cursor:pointer;
-    border:none;
+font-family:"Poppins",sans-serif;
+
+background:var(--cream);
+
+color:var(--brown-dark);
+
+overflow-x:hidden;
+
 }
 
 img{
-    max-width:100%;
-    display:block;
+
+display:block;
+
+max-width:100%;
+
+}
+
+button{
+
+cursor:pointer;
+
 }
 
 ::-webkit-scrollbar{
-    width:8px;
+
+width:8px;
+
 }
 
 ::-webkit-scrollbar-thumb{
-    background:var(--color-brown);
-    border-radius:999px;
+
+background:var(--brown);
+
+border-radius:999px;
+
 }
 
 ::-webkit-scrollbar-track{
-    background:white;
+
+background:white;
+
 }
