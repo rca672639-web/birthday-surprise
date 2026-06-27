@@ -20,7 +20,7 @@ export default function useTypewriter(text) {
 
       const char = text[index];
 
-      let delay = 35;
+      let delay = 20;
 
       if (char === ",") delay = 180;
       if (char === ".") delay = 500;

@@ -55,8 +55,8 @@ export default function HeroBackground() {
         }}
         className="
         absolute
-        right-0
-        bottom-0
+        right-.1
+        bottom-.1
         h-96
         w-96
         rounded-full

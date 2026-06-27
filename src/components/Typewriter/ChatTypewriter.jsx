@@ -26,7 +26,7 @@ export default function ChatTypewriter({ messages = [], delayBetween = 800 }) {
     if (finished) {
       const t = setTimeout(() => {
         if (index < messages.length - 1) setIndex((s) => s + 1);
-      }, delayBetween + 300);
+      }, delayBetween + 250);
       return () => clearTimeout(t);
     }
   }, [finished, index, messages.length, delayBetween]);
@@ -34,12 +34,12 @@ export default function ChatTypewriter({ messages = [], delayBetween = 800 }) {
   return (
     <div className="space-y-4">
       {messages.slice(0, index).map((m, i) => (
-        <div key={i} className="mx-auto max-w-3xl bg-white p-4 rounded-lg shadow-sm text-left md:text-center">
+        <div key={i} className="flex items-center mx-auto max-w-3xl bg-white p-4 rounded-lg shadow-sm text-left md:text-center">
           {m}
         </div>
       ))}
 
-      <div className="mx-auto max-w-3xl">
+      <div className="flex mx-auto max-w-3xl items-center">
         <Typewriter text={currentText} progress={progress} />
       </div>
     </div>
