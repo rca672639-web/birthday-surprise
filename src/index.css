@@ -76,3 +76,29 @@ border-radius:999px;
 background:white;
 
 }
+
+.envelope-bounce {
+  animation: envelope-bounce 2s ease-in-out infinite;
+}
+
+.envelope-flap {
+  animation: envelope-flap 1.8s ease-in-out infinite;
+}
+
+@keyframes envelope-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes envelope-flap {
+  0%, 100% {
+    transform: translateY(-50%) rotate(25deg);
+  }
+  50% {
+    transform: translateY(-60%) rotate(15deg);
+  }
+}

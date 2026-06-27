@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import GradientText from "../ui/GradientText";
 import Button from "../ui/Button";
 
-export default function HeroContent() {
+export default function HeroContent({ onReadLetter }) {
   return (
     <motion.div
       initial={{
@@ -18,12 +18,12 @@ export default function HeroContent() {
       }}
       className="z-20 max-w-3xl text-center"
     >
-      <p className="mb-6 text-lg uppercase tracking-[8px] text-[#6F4E37]">
-        A Special Day
+      <p className="mb-6 text-sm uppercase tracking-[6px] text-[#6F4E37] sm:text-base">
+        A Special Day; Special Like You
       </p>
 
       <h1
-        className="text-6xl font-bold leading-tight md:text-8xl"
+        className="text-4xl font-bold leading-tight md:text-6xl"
         style={{
           fontFamily: "Great Vibes",
         }}
@@ -32,7 +32,7 @@ export default function HeroContent() {
       </h1>
 
       <GradientText
-        className="block text-7xl md:text-9xl"
+        className="block text-5xl md:text-7xl"
       >
         Sharlyn
       </GradientText>
@@ -50,10 +50,11 @@ export default function HeroContent() {
         className="
         mx-auto
         mt-8
-        max-w-2xl
-        text-xl
-        leading-9
+        max-w-xl
+        text-base
+        leading-8
         text-[#4B2E2B]
+        sm:text-lg
         "
       >
         "You are the most beautiful chapter
@@ -63,14 +64,10 @@ export default function HeroContent() {
       </motion.p>
 
       <Button
-        className="mt-12"
-        onClick={() =>
-          document
-            .getElementById("letter")
-            ?.scrollIntoView({
-              behavior: "smooth",
-            })
-        }
+        className="mt-10 md:mt-12"
+        onClick={() => {
+          if (onReadLetter) onReadLetter();
+        }}
       >
         Read My Letter ❤️
       </Button>

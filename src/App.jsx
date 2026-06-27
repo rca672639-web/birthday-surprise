@@ -14,6 +14,7 @@ import Footer from "./components/Footer/Footer";
 export default function App() {
   const [giftOpened, setGiftOpened] = useState(false);
   const [started, setStarted] = useState(false);
+  const [letterOpened, setLetterOpened] = useState(false);
 
   if (!giftOpened) {
     return (
@@ -23,21 +24,33 @@ export default function App() {
 
   if (!started) {
     return (
-      <Intro onFinish={() => setStarted(true)} />
+      <>
+        <MusicPlayer startPlaying={started} />
+        <Intro onFinish={() => setStarted(true)} />
+      </>
     );
   }
 
   return (
     <>
       <ScrollProgress />
-      <MusicPlayer />
+      <MusicPlayer startPlaying={started} />
 
-      <Hero />
-      <Letter />
+      <Hero onReadLetter={() => {
+        if (letterOpened) {
+          document.getElementById('letter')?.scrollIntoView({ behavior: 'smooth' });
+          return;
+        }
+        setLetterOpened(true);
+        setTimeout(() => document.getElementById('letter')?.scrollIntoView({ behavior: 'smooth' }), 350);
+      }} />
+      <Letter visible={letterOpened} />
       <Gallery />
-      <Poem />
+      <Poem visible={letterOpened} />
       <Celebration />
-      <Footer />
+      <div align="center" className="mt-10">
+        <Footer />
+      </div>
     </>
   );
 }

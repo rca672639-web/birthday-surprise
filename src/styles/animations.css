@@ -15,6 +15,20 @@
 .animate-float-card {
   animation: floatCard 5s ease-in-out infinite;
 }
+
+@keyframes floatBalloon {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float-balloon {
+  animation: floatBalloon 2.5s ease-in-out infinite;
+}
 @keyframes petalFall {
 
 0%{

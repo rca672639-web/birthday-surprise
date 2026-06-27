@@ -1,20 +1,24 @@
+import heroPhoto from "../assets/images/hero.jpg";
+import togetherPhoto from "../assets/images/together-1.jpg";
+import hero1Photo from "../assets/images/hero1.jpeg";
+
 const gallery = [
   {
     id: 1,
     title: "Your Beautiful Smile ❤️",
-    image: "/images/gallery/sharlyn-1.jpg",
+    image: heroPhoto,
   },
 
   {
     id: 2,
     title: "Us ❤️",
-    image: "/images/gallery/together.jpg",
+    image: togetherPhoto,
   },
 
   {
     id: 3,
     title: "Forever My Favorite Person 🤍",
-    image: "/images/gallery/sharlyn-2.jpg",
+    image: hero1Photo,
   },
 ];
 

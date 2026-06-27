@@ -4,7 +4,6 @@ import SectionTitle from "../ui/SectionTitle";
 import GlassCard from "../ui/GlassCard";
 
 import Confetti from "./Confetti";
-import Fireworks from "./Fireworks";
 import FloatingGlow from "./FloatingGlow";
 
 export default function Celebration() {
@@ -12,7 +11,6 @@ export default function Celebration() {
     <section className="relative overflow-hidden bg-[#4B2E2B] py-32 text-white">
       <FloatingGlow />
       <Confetti />
-      <Fireworks />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6">
         <SectionTitle
