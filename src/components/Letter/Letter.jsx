@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { FaRegEnvelope, FaHeart } from "react-icons/fa";
-import SectionTitle from "../ui/SectionTitle";
-import GlassCard from "../ui/GlassCard";
+import SectionTitle from "../UI/SectionTitle";
+import GlassCard from "../UI/GlassCard";
 import Typewriter from "../Typewriter/Typewriter";
 
 import birthdayMessage from "../../data/birthdayMessage";
-import useTypewriter from "../../hooks/useTypewriter";
+import useTypewriter from "../../hooks/useTypeWriter";
 
 export default function Letter({ visible = true }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +21,7 @@ export default function Letter({ visible = true }) {
       id="letter"
       className="relative overflow-hidden bg-[#FFF8F0] py-28"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.8),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(251,207,232,0.35),transparent_40%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.8),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(251,207,232,0.35),transparent_40%)]"></div>
       <div className="mx-auto max-w-5xl px-6 relative" style={{ paddingTop: "28px", paddingBottom: "28px" }}>
         <SectionTitle
           title="A Letter Just For You ❤️"
@@ -41,9 +41,9 @@ export default function Letter({ visible = true }) {
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="group relative w-full overflow-hidden rounded-[40px] border border-pink-200/70 bg-gradient-to-br from-[#FFF4F6] via-[#FFF0F3] to-[#FFE6ED] p-8 text-left shadow-[0_30px_70px_rgba(236,73,153,0.18)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_35px_90px_rgba(236,73,153,0.25)]"
+            className="group relative w-full overflow-hidden rounded-[40px] border border-pink-200/70 bg-gradient-to-br from-[#FFF4F6] via-[#FFF0F3] to-[#FFE6ED] p-8 text-left shadow-[0_30px_70px_rgba(0,0,0,0.1)]"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.8),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(251,207,232,0.3),transparent_40%)] pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.8),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(251,207,232,0.3),transparent_40%)]"></div>
 
             <div className="absolute left-1/2 top-3 h-24 w-[85%] -translate-x-1/2 rounded-b-[3rem] bg-white/90 shadow-[0_20px_40px_rgba(255,255,255,0.9)]" />
 

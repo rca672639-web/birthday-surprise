@@ -48,7 +48,7 @@ export default function App() {
       <Gallery />
       <Poem visible={letterOpened} />
       <Celebration />
-      <div align="center" className="mt-10">
+      <div className="mt-10 text-center">
         <Footer />
       </div>
     </>

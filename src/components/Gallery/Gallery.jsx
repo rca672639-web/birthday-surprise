@@ -1,6 +1,6 @@
 import gallery from "../../data/gallery";
 
-import SectionTitle from "../ui/SectionTitle";
+import SectionTitle from "../UI/SectionTitle";
 import PhotoCard from "./PhotoCard";
 
 export default function Gallery() {
